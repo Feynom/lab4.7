@@ -26,6 +26,7 @@ int main()
     cout << setw(5) << "S" << setw(5) << "|" << endl;
     cout << "------------------------------------------" << endl;
 
+    double pi = 4 * atan(1.0);
     x = xp;  
     while (x <= xk)
     {
@@ -35,7 +36,7 @@ int main()
             do
             {
                 n++;
-                r = (2 * n + 1 - pow(-1, n + 1) * pow(x, 2 * n + 1) / (2 * n + 1));
+                r = (-x*x*(2*n-1))/(2*n+1);
                 a *= r;
                 s += a;
             } while (abs(a) >= eps);
@@ -43,7 +44,7 @@ int main()
             cout << "|" << setw(7) << setprecision(3) << x << setw(3);
             cout << "|" << setw(8) << setprecision(3) << atan(x) << setw(3);
             cout << "|" << setw(5) << setprecision(3) << n << setw(5);
-            cout << "|" << setw(8) << setprecision(3) << s << setw(2) << "|";
+            cout << "|" << setw(8) << setprecision(3) << s + pi/2. << setw(2) << "|";
             cout << endl;
             cout << "------------------------------------------" << endl;
 
