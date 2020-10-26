@@ -21,7 +21,7 @@ int main()
     cout << fixed;
     cout << "------------------------------------------" << endl;
     cout << "|" << setw(5) << "x" << setw(5) << "|";
-    cout << setw(9) << "arctg(x)" << setw(2) << "|";
+    cout << setw(9) << "arcctg(x)" << setw(2) << "|";
     cout << setw(5) << "n" << setw(5) << "|";
     cout << setw(5) << "S" << setw(5) << "|" << endl;
     cout << "------------------------------------------" << endl;
@@ -46,10 +46,12 @@ int main()
             cout << "|" << setw(5) << setprecision(3) << n << setw(5);
             cout << "|" << setw(8) << setprecision(3) << s + pi/2. << setw(2) << "|";
             cout << endl;
-            cout << "------------------------------------------" << endl;
+            
 
             x += dx;
+
     }
+    cout << "------------------------------------------" << endl;
 
     return 0;
 }
